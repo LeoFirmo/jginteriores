@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JG Interiores | Móveis Planejados e Estofados</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nature: {
+                            dark: '#2A3324',    // Verde floresta muito escuro
+                            primary: '#5E7052', // Verde sálvia/oliva
+                            light: '#F5F5F0',   // Branco off-white esverdeado
+                            sand: '#D5C4B3',    // Areia/Madeira clara
+                            clay: '#C28F70',    // Terracota suave
+                            text: '#4A4C46'     // Cinza chumbo suave
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '2.5rem',
+                        '5xl': '3.5rem',
+                        'arch': '12rem 12rem 0 0', // Para imagens em formato de arco
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Classes para animação de scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo para os placeholders de imagem - Estilo Natural */
+        .img-placeholder {
+            background-color: #E8E5DF;
+            /* Cor de linho/areia clara */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #8C867B;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .img-placeholder::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(94, 112, 82, 0.05) 100%);
+        }
+    </style>
+</head>
+
+<body
+    class="font-sans text-nature-text bg-[#FCFCFA] antialiased selection:bg-nature-primary selection:text-white overflow-x-hidden">
+
+    <header id="header"
+        class="fixed w-full z-50 transition-all duration-500 bg-[#FCFCFA]/90 backdrop-blur-md border-b border-nature-sand/30 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+
+            <a href="#hero" class="flex items-center group">
+                <img src="logo3.png" class="h-12 w-auto object-contain mr-3" alt="JG Interiores">
+
+                <div>
+                    <h1 class="text-lg font-bold tracking-wide text-nature-dark leading-none font-serif">JG Interiores
+                    </h1>
+                    <p class="text-[10px] uppercase tracking-widest text-nature-clay font-medium mt-1">Móveis Planejados
+                    </p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center text-sm font-medium text-nature-text">
+                <a href="#especialidades" class="hover:text-nature-primary transition-colors">Especialidades</a>
+                <a href="#diferenciais" class="hover:text-nature-primary transition-colors">Diferenciais</a>
+                <a href="#processo" class="hover:text-nature-primary transition-colors">Processo</a>
+                <a href="#sobre" class="hover:text-nature-primary transition-colors">Nossa História</a>
+                <a href="#contato"
+                    class="bg-nature-primary text-white px-6 py-2.5 rounded-full text-sm hover:bg-nature-dark transition-colors duration-300 shadow-sm">
+                    Fazer Orçamento
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-nature-dark focus:outline-none p-2">
+                <i data-lucide="menu" id="icon-menu" class="w-7 h-7"></i>
+                <i data-lucide="x" id="icon-close" class="w-7 h-7 hidden"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="fixed inset-0 top-[76px] bg-[#FCFCFA] z-40 hidden flex-col px-6 py-8 space-y-6 text-lg border-t border-nature-sand/30 h-screen">
+            <a href="#especialidades"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Especialidades</a>
+            <a href="#diferenciais"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Diferenciais</a>
+            <a href="#processo"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Processo de
+                Execução</a>
+            <a href="#sobre" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nossa
+                História</a>
+            <a href="https://wa.me/5569993329564" target="_blank"
+                class="bg-nature-primary text-white text-center py-4 rounded-full font-medium mt-4 flex justify-center items-center">
+                <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-nature-light overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-nature-sand/20 rounded-full blur-3xl">
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div class="reveal">
+                <div
+                    class="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-nature-sand/50 shadow-sm">
+                    <i data-lucide="leaf" class="w-4 h-4 text-nature-primary"></i>
+                    <span class="text-xs uppercase tracking-widest font-medium text-nature-dark">A essência do seu
+                        lar</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-serif font-bold leading-tight mb-6 text-nature-dark">
+                    Projetos que <br />
+                    <span class="text-nature-primary italic">respiram</span> vida e <br />
+                    conforto.
+                </h1>
+                <p class="text-lg text-nature-text mb-10 font-light max-w-lg leading-relaxed">
+                    Desde 1985 unindo a leveza da natureza à marcenaria de precisão. Criamos ambientes e estofados que
+                    abraçam a sua rotina.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5569993329564" target="_blank"
+                        class="bg-nature-primary text-white px-8 py-4 rounded-full font-medium hover:bg-nature-dark transition-colors flex items-center justify-center text-center shadow-lg shadow-nature-primary/20">
+                        Falar com Especialista <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                    <a href="#especialidades"
+                        class="bg-white text-nature-dark border border-nature-sand px-8 py-4 rounded-full font-medium hover:bg-nature-light transition-colors flex items-center justify-center text-center">
+                        Explorar Projetos
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative reveal flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4]">
+                    <img class="w-full h-full object-cover rounded-arch shadow-2xl border-4 border-white"
+                        style="border-top-left-radius: 40%;border-top-right-radius: 40%;" src="./1.png" alt="">
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-nature-light flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-nature-light flex items-center justify-center text-nature-clay">
+                            <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-nature-dark leading-none">Feito com Alma</p>
+                            <p class="text-xs text-nature-text font-medium mt-1">Materiais selecionados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diferenciais" class="py-24 bg-[#FCFCFA]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">Compromisso e
+                    Transparência</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-nature-dark">Por que arquitetos e clientes
+                    confiam na JG?</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div
+                    class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
+                        <i data-lucide="ruler" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-nature-dark mb-3 font-serif">Conferência Presencial</h4>
+                    <p class="text-nature-text leading-relaxed font-light">Visitamos o local para validar cada medida. O
+                        espaço dita as regras e nós garantimos que o projeto se encaixe com perfeição natural.</p>
+                </div>
+                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
+                        <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-nature-dark mb-3 font-serif">Fidelidade ao Projeto</h4>
+                    <p class="text-nature-text leading-relaxed font-light">O que está no papel ganha vida. Alinhamos
+                        minuciosamente cada detalhe antes de cortar a primeira chapa de madeira.</p>
+                </div>
+                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-nature-dark mb-3 font-serif">Acompanhamento Humano</h4>
+                    <p class="text-nature-text leading-relaxed font-light">Sem processos frios. Supervisão ativa desde a
+                        marcenaria até o ajuste fino na sua casa, entregando o ambiente limpo e pronto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="especialidades" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center mb-24 reveal">
+                <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">O Que Fazemos</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-nature-dark">Nossas Especialidades</h3>
+                <div class="w-16 h-1 bg-nature-sand mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+                <div class="order-2 lg:order-1 reveal">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-72 rounded-tl-full rounded-br-4xl overflow-hidden bg-gray-100"><img
+                                class="w-full h-full object-cover" src="./cozinha.png" alt="cozinha"></div>
+                        <div class="h-56 rounded-tr-4xl rounded-bl-4xl mt-16 overflow-hidden bg-gray-100"><img
+                                class="w-full h-full object-cover" src="./quarto.png" alt="quarto"></div>
+                        <div class="h-56 rounded-tl-4xl rounded-br-4xl -mt-16 overflow-hidden bg-gray-100"><img
+                                class="w-full h-full object-cover" src="./sala.png" alt="sala"></div>
+                        <div class="h-72 rounded-br-full rounded-tl-4xl overflow-hidden bg-gray-100"><img
+                                class="w-full h-full object-cover" src="./banheiro.png" alt="banheiro"></div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 reveal">
+                    <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Móveis Planejados</h4>
+                    <p class="text-lg text-nature-text mb-6 font-light leading-relaxed">
+                        Desenvolvemos soluções sob medida que respeitam a circulação e a luz do seu ambiente. De
+                        cozinhas funcionais a quartos de descanso profundo, cada móvel é pensado para tornar seu dia a
+                        dia mais fluido.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Materiais resistentes (MDP e MDF) com acabamentos
+                                que imitam texturas naturais.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Ferragens suaves que não interrompem o silêncio do
+                                seu lar.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Design focado em organização inteligente e
+                                ergonomia.</span></li>
+                    </ul>
+                    <a href="https://wa.me/5569993329564" target="_blank"
+                        class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
+                        Projetar meus móveis <i data-lucide="arrow-right"
+                            class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
+                <div class="reveal">
+                    <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Estofados & Conforto</h4>
+                    <p class="text-lg text-nature-text mb-6 font-light leading-relaxed">
+                        Acreditamos que o sofá é o coração da sala. Produzimos, reformamos e desenvolvemos peças do
+                        zero, unindo modelagem ergonômica a tecidos de toque macio e durável.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Sofás retráteis, motorizados e poltronas com design
+                                orgânico.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Linhas para área externa (Acquablock) resistentes
+                                ao sol e umidade.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Cabeceiras estofadas sob medida para noites de sono
+                                perfeitas.</span></li>
+                    </ul>
+                    <a href="https://wa.me/5569993329564" target="_blank"
+                        class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
+                        Ver catálogo de estofados <i data-lucide="arrow-right"
+                            class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                <div class="reveal">
+                    <div class="w-full h-[450px] rounded-[3rem] shadow-xl overflow-hidden bg-gray-100">
+                        <img class="w-full h-full object-cover" src="./sofaG.png" alt="sofá">
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 reveal">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 min-h-[450px]">
+                        <div class="md:col-span-8 rounded-3xl overflow-hidden bg-gray-100 h-full">
+                            <img class="w-full h-full object-cover" src="./cortina1.png" alt="Cortina Principal">
+                        </div>
+                        <div class="md:col-span-4 flex flex-col gap-4 h-full">
+                            <div class="rounded-3xl overflow-hidden bg-gray-100 flex-1">
+                                <img class="w-full h-full object-cover" src="./cortina2.png" alt="Cortina Detalhe 1">
+                            </div>
+                            <div class="rounded-3xl overflow-hidden bg-gray-100 flex-1">
+                                <img class="w-full h-full object-cover" src="cortina3.png" alt="Cortina Detalhe 2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 reveal">
+                    <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Persianas & Controle de Luz</h4>
+                    <p class="text-lg text-nature-text mb-6 font-light leading-relaxed">
+                        A luz natural muda completamente a energia de um ambiente. Oferecemos persianas que controlam a
+                        luminosidade e temperatura, criando atmosferas relaxantes e privativas.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Motorizadas</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Rolô</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Romanas</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Double
+                            Vision</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Madeira</span>
+                    </div>
+                    <a href="https://wa.me/5569993329564" target="_blank"
+                        class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
+                        Solicitar cotação de persianas <i data-lucide="arrow-right"
+                            class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="processo" class="py-24 bg-nature-light relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">Passo a Passo</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-nature-dark">Como transformamos seu espaço
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20">
+                    <div class="text-nature-primary font-serif text-5xl font-light mb-4">01.</div>
+                    <h4 class="text-lg font-bold text-nature-dark mb-2">Projeto e Orçamento</h4>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Avaliamos seu desejo, tiramos medidas
+                        iniciais e entregamos um projeto 3D claro junto com o orçamento.</p>
+                </div>
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 100ms;">
+                    <div class="text-nature-primary font-serif text-5xl font-light mb-4">02.</div>
+                    <h4 class="text-lg font-bold text-nature-dark mb-2">Visita Técnica</h3>
+                        <p class="text-nature-text font-light text-sm leading-relaxed">Voltamos ao local para
+                            conferência milimétrica. Um espaço bem medido é a garantia de um encaixe natural.</p>
+                </div>
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 200ms;">
+                    <div class="text-nature-primary font-serif text-5xl font-light mb-4">03.</div>
+                    <h4 class="text-lg font-bold text-nature-dark mb-2">Escolha de Materiais</h4>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Alinhamos todos os detalhes
+                        construtivos: puxadores, texturas de madeira e tecidos que conversam entre si.</p>
+                </div>
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20">
+                    <div class="text-nature-primary font-serif text-5xl font-light mb-4">04.</div>
+                    <h4 class="text-lg font-bold text-nature-dark mb-2">Fabricação com Cuidado</h4>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Produção atenta em nossa fábrica.
+                        Prazos reais (em média 20 dias úteis) para entregar qualidade duradoura.</p>
+                </div>
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 100ms;">
+                    <div class="text-nature-primary font-serif text-5xl font-light mb-4">05.</div>
+                    <h4 class="text-lg font-bold text-nature-dark mb-2">Montagem Especializada</h4>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Equipe limpa, educada e cuidadosa.
+                        Instalamos tudo garantindo o nivelamento e o respeito à sua casa.</p>
+                </div>
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 200ms;">
+                    <div class="text-nature-primary font-serif text-5xl font-light mb-4">06.</div>
+                    <h4 class="text-lg font-bold text-nature-dark mb-2">Revisão Final</h4>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Conferência final de portas,
+                        corrediças e acabamentos. O projeto só acaba quando o sorriso do cliente aparece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+
+                <!-- GALERIA DE FOTOS -->
+                <div class="w-full lg:w-1/2 reveal">
+                    <div class="relative p-6">
+
+                        <!-- Fundo decorativo -->
+                        <div class="absolute inset-0 bg-nature-light rounded-full transform -rotate-6"></div>
+
+                        <!-- Grid de fotos -->
+                        <div class="relative z-10 grid grid-cols-2 gap-4">
+
+                            <!-- FOTO VERTICAL -->
+                            <div
+                                class="col-span-1 row-span-2 rounded-[2rem] overflow-hidden shadow-2xl h-[520px] bg-gray-100">
+                                <img src="./trabalho-1v.png" alt="Equipe JG Interiores"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- FOTO HORIZONTAL SUPERIOR -->
+                            <div class="rounded-[2rem] overflow-hidden shadow-xl h-[250px] bg-gray-100">
+                                <img src="./trabalho-2h.png" alt="Família JG Interiores"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                            <!-- FOTO HORIZONTAL INFERIOR -->
+                            <div class="rounded-[2rem] overflow-hidden shadow-xl h-[250px] bg-gray-100">
+                                <img src="./trabalho-3h.png" alt="Produção JG Interiores"
+                                    class="w-full h-full object-cover">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TEXTO -->
+                <div class="w-full lg:w-1/2 reveal">
+                    <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">
+                        Nossas Raízes
+                    </h2>
+
+                    <h3 class="text-4xl font-serif font-bold text-nature-dark mb-6">
+                        Uma história de família, dedicação e cuidado real.
+                    </h3>
+
+                    <div class="space-y-6 text-nature-text font-light text-lg leading-relaxed">
+
+                        <p>
+                            A JG Interiores nasceu em 1985, dentro de casa. Começamos com reformas de estofados,
+                            impulsionados pela simples vontade de fazer bem feito. O tempo passou, evoluímos e a
+                            marcenaria sob medida floresceu no nosso negócio.
+                        </p>
+
+                        <p>
+                            Nossa essência familiar dita como trabalhamos: gostamos de estar perto, conversar,
+                            entender a dinâmica da sua casa e construir parcerias sinceras com você e seu arquiteto.
+                        </p>
+
+                        <div class="bg-nature-light p-6 rounded-2xl border-l-4 border-nature-primary">
+                            <p class="text-nature-dark font-medium italic">
+                                "Mais do que executar um projeto, queremos entregar ambientes que façam sentido,
+                                que tragam paz e funcionem na prática do seu dia a dia."
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-nature-dark pt-24 pb-12 text-white relative overflow-hidden">
+        <div
+            class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAi IGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==')]">
+        </div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal relative z-10">
+
+            <div class="bg-white/5 rounded-[3rem] p-10 md:p-16 border border-white/10 mb-20 backdrop-blur-sm">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+                    Vamos dar vida ao seu <br class="hidden md:block">próximo ambiente?
+                </h2>
+                <p class="text-nature-light/80 text-lg mb-10 max-w-2xl mx-auto font-light">
+                    Traga sua ideia ou projeto. Cuidaremos de cada detalhe para que seu espaço reflita sua verdadeira
+                    natureza. Entre em contato e agende uma conversa sem compromisso.
+                </p>
+                <a href="https://wa.me/5569993329564" target="_blank"
+                    class="inline-flex items-center bg-nature-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#4C5B42] hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-nature-dark/50">
+                    <i data-lucide="message-circle" class="mr-3 w-6 h-6"></i> Chamar Especialista no WhatsApp
+                </a>
+            </div>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left border-b border-white/10 pb-12 mb-8">
+                <div class="flex flex-col items-center md:items-start">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
+                        <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <h5 class="text-lg font-bold mb-2">Localização</h5>
+                    <p class="text-nature-light/70 font-light text-sm">Ji-Paraná / RO<br>Atendimento dedicado na região.
+                    </p>
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </div>
+                    <h5 class="text-lg font-bold mb-2">Contatos</h5>
+                    <p class="text-nature-light/70 font-light text-sm">(69) 99332-9564<br>(69) 99382-9370</p>
+                </div>
+                <div class="flex flex-col items-center md:items-start">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="w-6 h-6">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z" />
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                        </svg>
+
+                    </div>
+
+                    <h5 class="text-lg font-bold mb-2">Redes Sociais</h5>
+
+                    <a href="https://instagram.com/jginteriores.jipa" target="_blank"
+                        class="text-nature-light/70 font-light text-sm hover:text-white transition-colors">
+                        @jginteriores.jipa<br>
+                        Acompanhe nosso trabalho.
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm text-nature-light/50 font-light">
+                <p>&copy; <span id="year"></span> JG Interiores. Todos os direitos reservados.</p>
+                <p class="mt-2 md:mt-0">Desde 1985 transformando projetos em realidade.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5569993329564" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#1ebd5b] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
+        <i data-lucide="message-circle" class="w-8 h-8"></i>
+        <span
+            class="max-w-0 overflow-hidden group-hover:max-w-[150px] transition-all duration-500 ease-in-out whitespace-nowrap pl-0 group-hover:pl-3 font-medium">Fale
+            com a JG</span>
+    </a>
+
+    <script>
+        // Inicializar ícones
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Controle Navbar no Scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm', 'py-2');
+                header.classList.remove('py-4', 'border-nature-sand/30');
+                header.classList.add('border-nature-sand/10');
+            } else {
+                header.classList.remove('shadow-sm', 'py-2', 'border-nature-sand/10');
+                header.classList.add('py-4', 'border-nature-sand/30');
+            }
+        });
+
+        // Menu Mobile
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            iconMenu.classList.toggle('hidden');
+            iconClose.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        });
+
+        // Fechar menu mobile ao clicar
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                iconMenu.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
+
+        // --- ANIMAÇÃO DE REVEAL NO SCROLL ---
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        reveal(); 
+    </script>
+</body>
+
+</html>
