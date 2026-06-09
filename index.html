@@ -487,7 +487,7 @@
 
             </div>
         </div>
-        <img src="https://tracker-email-tau.vercel.app/api/imagem?t=Organico_site_JGInteriores" width="1" height="1" style="display:none;" />
+
     </section>
 
     <footer id="contato" class="bg-nature-dark pt-24 pb-12 text-white relative overflow-hidden">
@@ -629,6 +629,21 @@
 
         window.addEventListener("scroll", reveal);
         reveal(); 
+
+
+const isPreview = new URLSearchParams(window.location.search).get('preview') === 'true';
+    const isEmbedded = window.self !== window.top;
+
+    if (!isPreview && !isEmbedded) {
+        const tracker = document.createElement('img');
+        tracker.src = "https://tracker-email-tau.vercel.app/api/imagem?t=Organico_site_JGInteriores"; // mude o 't=' para cada site
+        tracker.width = 1;
+        tracker.height = 1;
+        tracker.style.display = "none";
+        document.body.appendChild(tracker);
+    }
+
+        
     </script>
 </body>
 
