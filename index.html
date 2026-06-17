@@ -82,6 +82,14 @@
             transform: scale(1.03);
             filter: brightness(0.9);
         }
+
+        /* Classes extras para o Carrossel do Portfólio */
+        .group\/slider:hover .group-hover\/slider\:opacity-100 {
+            opacity: 1;
+        }
+        .group\/slider:hover .group-hover\/slider\:translate-x-0 {
+            transform: translateX(0);
+        }
     </style>
 </head>
 
@@ -98,11 +106,12 @@
                 </div>
             </a>
 
-            <nav class="hidden md:flex space-x-8 items-center text-sm font-medium text-nature-text">
+            <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm font-medium text-nature-text">
                 <a href="#especialidades" class="hover:text-nature-primary transition-colors">Especialidades</a>
                 <a href="#diferenciais" class="hover:text-nature-primary transition-colors">Diferenciais</a>
                 <a href="#processo" class="hover:text-nature-primary transition-colors">Processo</a>
-                <a href="#sobre" class="hover:text-nature-primary transition-colors">Nossa História</a>
+                <a href="#portfolio" class="hover:text-nature-primary transition-colors">Portfólio</a>
+                <a href="#sobre" class="hover:text-nature-primary transition-colors">História</a>
                 <a href="#contato" class="bg-nature-primary text-white px-6 py-2.5 rounded-full text-sm hover:bg-nature-dark transition-colors duration-300 shadow-sm">
                     Fazer Orçamento
                 </a>
@@ -118,6 +127,7 @@
             <a href="#especialidades" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Especialidades</a>
             <a href="#diferenciais" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Diferenciais</a>
             <a href="#processo" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Processo de Execução</a>
+            <a href="#portfolio" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nosso Portfólio</a>
             <a href="#sobre" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nossa História</a>
             <a href="https://wa.me/5569993329564" target="_blank" class="bg-nature-primary text-white text-center py-4 rounded-full font-medium mt-4 flex justify-center items-center">
                 <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> Falar no WhatsApp
@@ -347,6 +357,168 @@
         </div>
     </section>
 
+    <!-- NOVA SESSÃO: PORTFÓLIO -->
+    <section id="portfolio" class="py-24 bg-[#FCFCFA] border-t border-nature-sand/20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="max-w-2xl">
+                    <h2 class="text-sm font-semibold tracking-widest uppercase text-nature-clay mb-3">Nosso Portfólio</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold font-serif text-nature-dark mb-4">Inspirações <span class="font-serif italic text-nature-primary">Realizadas</span></h3>
+                    <p class="text-nature-text text-lg font-light">Um olhar sobre interiores aconchegantes, estofados sob medida e espaços planejados para a sua rotina.</p>
+                </div>
+                <a href="https://instagram.com/jginterioresjipa" target="_blank" rel="noopener noreferrer" class="mt-6 md:mt-0 flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-nature-dark hover:text-nature-primary transition-colors pb-2 border-b border-nature-sand/50 hover:border-nature-primary">
+                    Ver no Instagram <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- CARROSSEL DO PORTFÓLIO (4 SLIDES X 12 IMAGENS) -->
+            <div class="relative w-full overflow-hidden group/slider rounded-3xl">
+                
+                <!-- Botões de Navegação -->
+                <button id="portfolio-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-nature-primary text-nature-dark hover:text-white p-3 rounded-r-2xl shadow-lg opacity-0 group-hover/slider:opacity-100 transition-all duration-300 transform -translate-x-full group-hover/slider:translate-x-0 focus:outline-none" aria-label="Página Anterior">
+                    <i data-lucide="chevron-left" class="w-8 h-8"></i>
+                </button>
+                <button id="portfolio-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-nature-primary text-nature-dark hover:text-white p-3 rounded-l-2xl shadow-lg opacity-0 group-hover/slider:opacity-100 transition-all duration-300 transform translate-x-full group-hover/slider:translate-x-0 focus:outline-none" aria-label="Próxima Página">
+                    <i data-lucide="chevron-right" class="w-8 h-8"></i>
+                </button>
+
+                <!-- Trilho do Carrossel -->
+                <div id="portfolio-track" class="flex transition-transform duration-700 ease-in-out w-full">
+                    
+                    <!-- SLIDE 1: SALAS (12 Imagens) -->
+                    <div class="w-full shrink-0">
+                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
+                            <span class="text-nature-dark font-serif font-bold text-xl">Salas & Livings</span>
+                        </div>
+                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                            <!-- Gerando 12 fotos com proporções alternadas para dar o efeito Masonry -->
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sala+1" alt="Sala 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Sala+2" alt="Sala 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Sala+3" alt="Sala 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/800x800/D5C4B3/4A4C46?text=Sala+4" alt="Sala 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/600x600/E8E5DF/4A4C46?text=Sala+5" alt="Sala 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/800x1000/F5F5F0/4A4C46?text=Sala+6" alt="Sala 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sala+7" alt="Sala 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Sala+8" alt="Sala 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Sala+9" alt="Sala 9" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/800x800/D5C4B3/4A4C46?text=Sala+10" alt="Sala 10" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/600x600/E8E5DF/4A4C46?text=Sala+11" alt="Sala 11" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
+                                <img src="https://placehold.co/800x1000/F5F5F0/4A4C46?text=Sala+12" alt="Sala 12" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
+                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2: SOFÁS (12 Imagens) -->
+                    <div class="w-full shrink-0">
+                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
+                            <span class="text-nature-dark font-serif font-bold text-xl">Sofás & Poltronas</span>
+                        </div>
+                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/C28F70/FFFFFF?text=Sofa+1" alt="Sofa 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/C28F70/FFFFFF?text=Sofa+2" alt="Sofa 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sofa+3" alt="Sofa 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/C28F70/FFFFFF?text=Sofa+4" alt="Sofa 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/D5C4B3/4A4C46?text=Sofa+5" alt="Sofa 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/C28F70/FFFFFF?text=Sofa+6" alt="Sofa 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/D5C4B3/4A4C46?text=Sofa+7" alt="Sofa 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/C28F70/FFFFFF?text=Sofa+8" alt="Sofa 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sofa+9" alt="Sofa 9" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/C28F70/FFFFFF?text=Sofa+10" alt="Sofa 10" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/D5C4B3/4A4C46?text=Sofa+11" alt="Sofa 11" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/C28F70/FFFFFF?text=Sofa+12" alt="Sofa 12" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3: CORTINAS (12 Imagens) -->
+                    <div class="w-full shrink-0">
+                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
+                            <span class="text-nature-dark font-serif font-bold text-xl">Cortinas & Persianas</span>
+                        </div>
+                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/E8E5DF/4A4C46?text=Cortina+1" alt="Cortina 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/F5F5F0/4A4C46?text=Cortina+2" alt="Cortina 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Cortina+3" alt="Cortina 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Cortina+4" alt="Cortina 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/E8E5DF/4A4C46?text=Cortina+5" alt="Cortina 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/F5F5F0/4A4C46?text=Cortina+6" alt="Cortina 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/E8E5DF/4A4C46?text=Cortina+7" alt="Cortina 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/F5F5F0/4A4C46?text=Cortina+8" alt="Cortina 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Cortina+9" alt="Cortina 9" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Cortina+10" alt="Cortina 10" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/E8E5DF/4A4C46?text=Cortina+11" alt="Cortina 11" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/F5F5F0/4A4C46?text=Cortina+12" alt="Cortina 12" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4: QUARTOS E BANHEIROS (12 Imagens) -->
+                    <div class="w-full shrink-0">
+                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
+                            <span class="text-nature-dark font-serif font-bold text-xl">Quartos & Banheiros</span>
+                        </div>
+                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/5E7052/FFFFFF?text=Quarto+1" alt="Quarto 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/5E7052/FFFFFF?text=Quarto+2" alt="Quarto 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/5E7052/FFFFFF?text=Quarto+3" alt="Quarto 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/5E7052/FFFFFF?text=Quarto+4" alt="Quarto 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/5E7052/FFFFFF?text=Banheiro+1" alt="Banheiro 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/5E7052/FFFFFF?text=Banheiro+2" alt="Banheiro 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/5E7052/FFFFFF?text=Quarto+5" alt="Quarto 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/5E7052/FFFFFF?text=Quarto+6" alt="Quarto 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/5E7052/FFFFFF?text=Quarto+7" alt="Quarto 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/5E7052/FFFFFF?text=Quarto+8" alt="Quarto 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/5E7052/FFFFFF?text=Banheiro+3" alt="Banheiro 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/5E7052/FFFFFF?text=Banheiro+4" alt="Banheiro 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Indicadores do Carrossel (Bolinhas) -->
+                <div class="flex justify-center gap-3 mt-12" id="portfolio-dots">
+                    <button class="portfolio-dot w-8 h-3 rounded-full bg-nature-primary transition-all duration-300" aria-label="Slide 1"></button>
+                    <button class="portfolio-dot w-3 h-3 rounded-full bg-nature-sand hover:bg-nature-primary transition-all duration-300" aria-label="Slide 2"></button>
+                    <button class="portfolio-dot w-3 h-3 rounded-full bg-nature-sand hover:bg-nature-primary transition-all duration-300" aria-label="Slide 3"></button>
+                    <button class="portfolio-dot w-3 h-3 rounded-full bg-nature-sand hover:bg-nature-primary transition-all duration-300" aria-label="Slide 4"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="sobre" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
@@ -549,59 +721,91 @@
             document.body.appendChild(tracker);
         }
 
+        // --- SISTEMA DE CARROSSEL DO PORTFÓLIO ---
+        const track = document.getElementById('portfolio-track');
+        const prevBtn = document.getElementById('portfolio-prev');
+        const nextBtn = document.getElementById('portfolio-next');
+        const dots = document.querySelectorAll('.portfolio-dot');
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('w-8', 'bg-nature-primary');
+                    dot.classList.remove('w-3', 'bg-nature-sand');
+                } else {
+                    dot.classList.remove('w-8', 'bg-nature-primary');
+                    dot.classList.add('w-3', 'bg-nature-sand');
+                }
+            });
+        }
+
+        if(nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateCarousel();
+                });
+            });
+        }
+
         // --- SISTEMA DE LIGHTBOX (GALERIA) ---
         const lightboxModal = document.getElementById('lightbox-modal');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCloseBtn = document.getElementById('lightbox-close');
         const lightboxBackdrop = document.getElementById('lightbox-backdrop');
 
-        // Pega todas as imagens que tem a classe 'clickable-img' (que adicionei no HTML)
+        // Pega todas as imagens que tem a classe 'clickable-img'
         const galleryImages = document.querySelectorAll('.clickable-img');
 
-        // Função para abrir
         function openLightbox(imageSrc) {
             lightboxImg.src = imageSrc;
             lightboxModal.classList.remove('hidden');
             lightboxModal.classList.add('flex');
             
-            // Pequeno delay para a transição de opacidade/escala funcionar após remover o 'hidden'
             setTimeout(() => {
                 lightboxModal.classList.remove('opacity-0');
                 lightboxImg.classList.remove('scale-95');
                 lightboxImg.classList.add('scale-100');
             }, 10);
 
-            // Trava o scroll do site no fundo
             document.body.classList.add('overflow-hidden');
         }
 
-        // Função para fechar
         function closeLightbox() {
             lightboxModal.classList.add('opacity-0');
             lightboxImg.classList.remove('scale-100');
             lightboxImg.classList.add('scale-95');
             
-            // Espera a animação acabar para esconder de fato
             setTimeout(() => {
                 lightboxModal.classList.add('hidden');
                 lightboxModal.classList.remove('flex');
-                lightboxImg.src = ""; // Limpa para não piscar a imagem antiga na próxima abertura
+                lightboxImg.src = ""; 
                 document.body.classList.remove('overflow-hidden');
             }, 300);
         }
 
-        // Adiciona o evento de clique em cada imagem do site
         galleryImages.forEach(img => {
             img.addEventListener('click', (e) => {
                 openLightbox(e.target.src);
             });
         });
 
-        // Eventos para fechar a foto
         lightboxCloseBtn.addEventListener('click', closeLightbox);
-        lightboxBackdrop.addEventListener('click', closeLightbox); // Fecha se clicar na parte escura
+        lightboxBackdrop.addEventListener('click', closeLightbox); 
 
-        // Fecha se apertar ESC no teclado (ótimo para computadores)
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
                 closeLightbox();
