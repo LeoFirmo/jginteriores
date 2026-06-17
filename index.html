@@ -8,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -72,12 +74,13 @@
             inset: 0;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(94, 112, 82, 0.05) 100%);
         }
-        
+
         /* Efeito hover para imagens clicáveis */
         .clickable-img {
             cursor: pointer;
             transition: transform 0.4s ease, filter 0.4s ease;
         }
+
         .clickable-img:hover {
             transform: scale(1.03);
             filter: brightness(0.9);
@@ -87,32 +90,38 @@
         .group\/slider:hover .group-hover\/slider\:opacity-100 {
             opacity: 1;
         }
+
         .group\/slider:hover .group-hover\/slider\:translate-x-0 {
             transform: translateX(0);
         }
     </style>
 </head>
 
-<body class="font-sans text-nature-text bg-[#FCFCFA] antialiased selection:bg-nature-primary selection:text-white overflow-x-hidden">
+<body
+    class="font-sans text-nature-text bg-[#FCFCFA] antialiased selection:bg-nature-primary selection:text-white overflow-x-hidden">
 
-    <header id="header" class="fixed w-full z-40 transition-all duration-500 bg-[#FCFCFA]/90 backdrop-blur-md border-b border-nature-sand/30 py-4">
+    <header id="header"
+        class="fixed w-full z-40 transition-all duration-500 bg-[#FCFCFA]/90 backdrop-blur-md border-b border-nature-sand/30 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             <a href="#hero" class="flex items-center group">
                 <!-- Fallback na imagem caso não carregue logo.png -->
-                <img src="logo.png" onerror="this.src='https://placehold.co/100x48/F5F5F0/2A3324?text=JG'" class="h-12 w-auto object-contain mr-3" alt="JG Interiores">
+                <img src="logo.png" onerror="this.src='https://placehold.co/100x48/F5F5F0/2A3324?text=JG'"
+                    class="h-12 w-auto object-contain mr-3" alt="JG Interiores">
                 <div>
                     <h1 class="text-lg font-bold tracking-wide text-nature-dark leading-none font-serif">Interiores</h1>
-                    <p class="text-[10px] uppercase tracking-widest text-nature-clay font-medium mt-1">Móveis Planejados</p>
+                    <p class="text-[10px] uppercase tracking-widest text-nature-clay font-medium mt-1">Móveis Planejados
+                    </p>
                 </div>
             </a>
 
             <nav class="hidden md:flex space-x-6 lg:space-x-8 items-center text-sm font-medium text-nature-text">
                 <a href="#especialidades" class="hover:text-nature-primary transition-colors">Especialidades</a>
                 <a href="#diferenciais" class="hover:text-nature-primary transition-colors">Diferenciais</a>
-                <a href="#portfolio" class="hover:text-nature-primary transition-colors">Portfólio</a>
                 <a href="#processo" class="hover:text-nature-primary transition-colors">Processo</a>
                 <a href="#sobre" class="hover:text-nature-primary transition-colors">História</a>
-                <a href="#contato" class="bg-nature-primary text-white px-6 py-2.5 rounded-full text-sm hover:bg-nature-dark transition-colors duration-300 shadow-sm">
+                <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20projeto."
+                    target="_blank"
+                    class="bg-nature-primary text-white px-6 py-2.5 rounded-full text-sm hover:bg-nature-dark transition-colors duration-300 shadow-sm">
                     Fazer Orçamento
                 </a>
             </nav>
@@ -123,26 +132,39 @@
             </button>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-0 top-[76px] bg-[#FCFCFA] z-40 hidden flex-col px-6 py-8 space-y-6 text-lg border-t border-nature-sand/30 h-screen">
-            <a href="#especialidades" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Especialidades</a>
-            <a href="#diferenciais" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Diferenciais</a>
-            <a href="#processo" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Processo de Execução</a>
-            <a href="#portfolio" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nosso Portfólio</a>
-            <a href="#sobre" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nossa História</a>
-            <a href="https://wa.me/5569993329564" target="_blank" class="bg-nature-primary text-white text-center py-4 rounded-full font-medium mt-4 flex justify-center items-center">
+        <div id="mobile-menu"
+            class="fixed inset-0 top-[76px] bg-[#FCFCFA] z-40 hidden flex-col px-6 py-8 space-y-6 text-lg border-t border-nature-sand/30 h-screen">
+            <a href="#especialidades"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Especialidades</a>
+            <a href="#diferenciais"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Diferenciais</a>
+            <a href="#processo"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Processo de
+                Execução</a>
+            <a href="#portfolio"
+                class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nosso Portfólio</a>
+            <a href="#sobre" class="mobile-link text-nature-dark font-medium border-b border-nature-light pb-4">Nossa
+                História</a>
+            <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+                target="_blank"
+                class="bg-nature-primary text-white text-center py-4 rounded-full font-medium mt-4 flex justify-center items-center">
                 <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> Falar no WhatsApp
             </a>
         </div>
     </header>
 
     <section id="hero" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 bg-nature-light overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-nature-sand/20 rounded-full blur-3xl"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-[600px] h-[600px] bg-nature-sand/20 rounded-full blur-3xl">
+        </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div class="reveal">
-                <div class="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-nature-sand/50 shadow-sm">
+                <div
+                    class="inline-flex items-center space-x-2 bg-white px-4 py-1.5 rounded-full mb-6 border border-nature-sand/50 shadow-sm">
                     <i data-lucide="leaf" class="w-4 h-4 text-nature-primary"></i>
-                    <span class="text-xs uppercase tracking-widest font-medium text-nature-dark">A essência do seu lar</span>
+                    <span class="text-xs uppercase tracking-widest font-medium text-nature-dark">A essência do seu
+                        lar</span>
                 </div>
                 <h1 class="text-5xl md:text-6xl font-serif font-bold leading-tight mb-6 text-nature-dark">
                     Projetos que <br />
@@ -150,24 +172,33 @@
                     conforto.
                 </h1>
                 <p class="text-lg text-nature-text mb-10 font-light max-w-lg leading-relaxed">
-                    Desde 1985 unindo a leveza da natureza à marcenaria de precisão. Criamos ambientes e estofados que abraçam a sua rotina.
+                    Desde 1985 unindo a leveza da natureza à marcenaria de precisão. Criamos ambientes e estofados que
+                    abraçam a sua rotina.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="https://wa.me/5569993329564" target="_blank" class="bg-nature-primary text-white px-8 py-4 rounded-full font-medium hover:bg-nature-dark transition-colors flex items-center justify-center text-center shadow-lg shadow-nature-primary/20">
+                    <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+                        target="_blank"
+                        class="bg-nature-primary text-white px-8 py-4 rounded-full font-medium hover:bg-nature-dark transition-colors flex items-center justify-center text-center shadow-lg shadow-nature-primary/20">
                         Falar com Especialista <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
                     </a>
-                    <a href="#especialidades" class="bg-white text-nature-dark border border-nature-sand px-8 py-4 rounded-full font-medium hover:bg-nature-light transition-colors flex items-center justify-center text-center">
+                    <a href="#especialidades"
+                        class="bg-white text-nature-dark border border-nature-sand px-8 py-4 rounded-full font-medium hover:bg-nature-light transition-colors flex items-center justify-center text-center">
                         Explorar Projetos
                     </a>
                 </div>
             </div>
 
             <div class="relative reveal flex justify-center lg:justify-end">
-                <div class="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-[12rem_12rem_0_0] shadow-2xl border-4 border-white">
-                    <img class="w-full h-full object-cover clickable-img" src="./1.png" onerror="this.src='https://placehold.co/600x800/E8E5DF/8C867B?text=Projeto+Destaque'" alt="Projeto Destaque">
+                <div
+                    class="relative w-full max-w-md aspect-[4/5] md:aspect-[3/4] overflow-hidden rounded-[12rem_12rem_0_0] shadow-2xl border-4 border-white">
+                    <img class="w-full h-full object-cover clickable-img" src="./1.png"
+                        onerror="this.src='https://placehold.co/600x800/E8E5DF/8C867B?text=Projeto+Destaque'"
+                        alt="Projeto Destaque">
                 </div>
-                <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-nature-light flex items-center gap-4 z-20">
-                    <div class="w-12 h-12 rounded-full bg-nature-light flex items-center justify-center text-nature-clay">
+                <div
+                    class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-nature-light flex items-center gap-4 z-20">
+                    <div
+                        class="w-12 h-12 rounded-full bg-nature-light flex items-center justify-center text-nature-clay">
                         <i data-lucide="heart-handshake" class="w-6 h-6"></i>
                     </div>
                     <div>
@@ -182,31 +213,42 @@
     <section id="diferenciais" class="py-24 bg-[#FCFCFA]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-                <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">Compromisso e Transparência</h2>
-                <h3 class="text-3xl md:text-4xl font-serif font-bold text-nature-dark">Por que arquitetos e clientes confiam na JG?</h3>
+                <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">Compromisso e
+                    Transparência</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-nature-dark">Por que arquitetos e clientes
+                    confiam na JG?</h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
+                <div
+                    class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300">
+                    <div
+                        class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
                         <i data-lucide="ruler" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold text-nature-dark mb-3 font-serif">Conferência Presencial</h4>
-                    <p class="text-nature-text leading-relaxed font-light">Visitamos o local para validar cada medida. O espaço dita as regras e nós garantimos que o projeto se encaixe com perfeição natural.</p>
+                    <p class="text-nature-text leading-relaxed font-light">Visitamos o local para validar cada medida. O
+                        espaço dita as regras e nós garantimos que o projeto se encaixe com perfeição natural.</p>
                 </div>
-                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
+                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300"
+                    style="transition-delay: 100ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
                         <i data-lucide="check-circle-2" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold text-nature-dark mb-3 font-serif">Fidelidade ao Projeto</h4>
-                    <p class="text-nature-text leading-relaxed font-light">O que está no papel ganha vida. Alinhamos minuciosamente cada detalhe antes de cortar a primeira chapa de madeira.</p>
+                    <p class="text-nature-text leading-relaxed font-light">O que está no papel ganha vida. Alinhamos
+                        minuciosamente cada detalhe antes de cortar a primeira chapa de madeira.</p>
                 </div>
-                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300" style="transition-delay: 200ms;">
-                    <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
+                <div class="reveal bg-nature-light p-8 rounded-3xl border border-white hover:shadow-lg transition-all duration-300"
+                    style="transition-delay: 200ms;">
+                    <div
+                        class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-6 text-nature-primary shadow-sm">
                         <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
                     <h4 class="text-xl font-bold text-nature-dark mb-3 font-serif">Acompanhamento Humano</h4>
-                    <p class="text-nature-text leading-relaxed font-light">Sem processos frios. Supervisão ativa desde a marcenaria até o ajuste fino na sua casa, entregando o ambiente limpo e pronto.</p>
+                    <p class="text-nature-text leading-relaxed font-light">Sem processos frios. Supervisão ativa desde a
+                        marcenaria até o ajuste fino na sua casa, entregando o ambiente limpo e pronto.</p>
                 </div>
             </div>
         </div>
@@ -224,32 +266,57 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
                 <div class="order-2 lg:order-1 reveal">
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="h-72 rounded-tl-full rounded-br-4xl overflow-hidden bg-gray-100 relative z-10 isolate">
-                            <img class="w-full h-full object-cover clickable-img" src="./cozinha.png" onerror="this.src='https://placehold.co/400x600/E8E5DF/8C867B?text=Cozinha'" alt="cozinha">
+                        <div
+                            class="h-72 rounded-tl-full rounded-br-4xl overflow-hidden bg-gray-100 relative z-10 isolate">
+                            <img class="w-full h-full object-cover clickable-img" src="./cozinha.png"
+                                onerror="this.src='https://placehold.co/400x600/E8E5DF/8C867B?text=Cozinha'"
+                                alt="cozinha">
                         </div>
-                        <div class="h-56 rounded-tr-4xl rounded-bl-4xl mt-16 overflow-hidden bg-gray-100 relative z-10 isolate">
-                            <img class="w-full h-full object-cover clickable-img" src="./quarto.png" onerror="this.src='https://placehold.co/400x400/D5C4B3/8C867B?text=Quarto'" alt="quarto">
+                        <div
+                            class="h-56 rounded-tr-4xl rounded-bl-4xl mt-16 overflow-hidden bg-gray-100 relative z-10 isolate">
+                            <img class="w-full h-full object-cover clickable-img" src="./quarto.png"
+                                onerror="this.src='https://placehold.co/400x400/D5C4B3/8C867B?text=Quarto'"
+                                alt="quarto">
                         </div>
-                        <div class="h-56 rounded-tl-4xl rounded-br-4xl -mt-16 overflow-hidden bg-gray-100 relative z-20 isolate">
-                            <img class="w-full h-full object-cover clickable-img" src="./sala.png" onerror="this.src='https://placehold.co/400x400/C28F70/FFFFFF?text=Sala'" alt="sala">
+                        <div
+                            class="h-56 rounded-tl-4xl rounded-br-4xl -mt-16 overflow-hidden bg-gray-100 relative z-20 isolate">
+                            <img class="w-full h-full object-cover clickable-img" src="./sala.png"
+                                onerror="this.src='https://placehold.co/400x400/C28F70/FFFFFF?text=Sala'" alt="sala">
                         </div>
-                        <div class="h-72 rounded-br-full rounded-tl-4xl overflow-hidden bg-gray-100 relative z-10 isolate">
-                            <img class="w-full h-full object-cover clickable-img" src="./banheiro.png" onerror="this.src='https://placehold.co/400x600/5E7052/FFFFFF?text=Banheiro'" alt="banheiro">
+                        <div
+                            class="h-72 rounded-br-full rounded-tl-4xl overflow-hidden bg-gray-100 relative z-10 isolate">
+                            <img class="w-full h-full object-cover clickable-img" src="./banheiro.png"
+                                onerror="this.src='https://placehold.co/400x600/5E7052/FFFFFF?text=Banheiro'"
+                                alt="banheiro">
                         </div>
                     </div>
                 </div>
                 <div class="order-1 lg:order-2 reveal">
                     <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Móveis Planejados</h4>
                     <p class="text-lg text-nature-text mb-6 font-light leading-relaxed">
-                        Desenvolvemos soluções sob medida que respeitam a circulação e a luz do seu ambiente. De cozinhas funcionais a quartos de descanso profundo, cada móvel é pensado para tornar seu dia a dia mais fluido.
+                        Desenvolvemos soluções sob medida que respeitam a circulação e a luz do seu ambiente. De
+                        cozinhas funcionais a quartos de descanso profundo, cada móvel é pensado para tornar seu dia a
+                        dia mais fluido.
                     </p>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-start"><i data-lucide="leaf" class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span class="text-nature-dark font-medium">Materiais resistentes (MDP e MDF) com acabamentos que imitam texturas naturais.</span></li>
-                        <li class="flex items-start"><i data-lucide="leaf" class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span class="text-nature-dark font-medium">Ferragens suaves que não interrompem o silêncio do seu lar.</span></li>
-                        <li class="flex items-start"><i data-lucide="leaf" class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span class="text-nature-dark font-medium">Design focado em organização inteligente e ergonomia.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Materiais resistentes (MDP e MDF) com acabamentos
+                                que imitam texturas naturais.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Ferragens suaves que não interrompem o silêncio do
+                                seu lar.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Design focado em organização inteligente e
+                                ergonomia.</span></li>
                     </ul>
-                    <a href="https://wa.me/5569993329564" target="_blank" class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
-                        Projetar meus móveis <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vi%20a%20se%C3%A7%C3%A3o%20de%20m%C3%B3veis%20planejados%20no%20site%20e%20quero%20projetar%20os%20meus."
+                        target="_blank"
+                        class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
+                        Projetar meus móveis <i data-lucide="arrow-right"
+                            class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -259,20 +326,34 @@
                 <div class="reveal">
                     <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Estofados & Conforto</h4>
                     <p class="text-lg text-nature-text mb-6 font-light leading-relaxed">
-                        Acreditamos que o sofá é o coração da sala. Produzimos, reformamos e desenvolvemos peças do zero, unindo modelagem ergonômica a tecidos de toque macio e durável.
+                        Acreditamos que o sofá é o coração da sala. Produzimos, reformamos e desenvolvemos peças do
+                        zero, unindo modelagem ergonômica a tecidos de toque macio e durável.
                     </p>
                     <ul class="space-y-4 mb-8">
-                        <li class="flex items-start"><i data-lucide="leaf" class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span class="text-nature-dark font-medium">Sofás retráteis, motorizados e poltronas com design orgânico.</span></li>
-                        <li class="flex items-start"><i data-lucide="leaf" class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span class="text-nature-dark font-medium">Linhas para área externa (Acquablock) resistentes ao sol e umidade.</span></li>
-                        <li class="flex items-start"><i data-lucide="leaf" class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span class="text-nature-dark font-medium">Cabeceiras estofadas sob medida para noites de sono perfeitas.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Sofás retráteis, motorizados e poltronas com design
+                                orgânico.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Linhas para área externa (Acquablock) resistentes
+                                ao sol e umidade.</span></li>
+                        <li class="flex items-start"><i data-lucide="leaf"
+                                class="text-nature-primary mt-1 mr-3 w-5 h-5 flex-shrink-0"></i> <span
+                                class="text-nature-dark font-medium">Cabeceiras estofadas sob medida para noites de sono
+                                perfeitas.</span></li>
                     </ul>
-                    <a href="https://wa.me/5569993329564" target="_blank" class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
-                        Ver catálogo de estofados <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vi%20os%20estofados%20no%20site%20e%20gostaria%20de%20ver%20o%20cat%C3%A1logo."
+                        target="_blank"
+                        class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
+                        Ver catálogo de estofados <i data-lucide="arrow-right"
+                            class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
                     </a>
                 </div>
                 <div class="reveal">
                     <div class="w-full h-[450px] rounded-[3rem] shadow-xl overflow-hidden bg-gray-100">
-                        <img class="w-full h-full object-cover clickable-img" src="./sofaG.png" onerror="this.src='https://placehold.co/800x600/E8E5DF/8C867B?text=Sofá'" alt="sofá">
+                        <img class="w-full h-full object-cover clickable-img" src="./sofaG.png"
+                            onerror="this.src='https://placehold.co/800x600/E8E5DF/8C867B?text=Sofá'" alt="sofá">
                     </div>
                 </div>
             </div>
@@ -282,14 +363,20 @@
                 <div class="order-2 lg:order-1 reveal">
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-4 min-h-[450px]">
                         <div class="md:col-span-8 rounded-3xl overflow-hidden bg-gray-100 h-full">
-                            <img class="w-full h-full object-cover clickable-img" src="./cortina1.png" onerror="this.src='https://placehold.co/600x800/E8E5DF/8C867B?text=Cortina'" alt="Cortina Principal">
+                            <img class="w-full h-full object-cover clickable-img" src="./cortina1.png"
+                                onerror="this.src='https://placehold.co/600x800/E8E5DF/8C867B?text=Cortina'"
+                                alt="Cortina Principal">
                         </div>
                         <div class="md:col-span-4 flex flex-col gap-4 h-full">
                             <div class="rounded-3xl overflow-hidden bg-gray-100 flex-1">
-                                <img class="w-full h-full object-cover clickable-img" src="./cortina2.png" onerror="this.src='https://placehold.co/400x400/D5C4B3/8C867B?text=Detalhe'" alt="Cortina Detalhe 1">
+                                <img class="w-full h-full object-cover clickable-img" src="./cortina2.png"
+                                    onerror="this.src='https://placehold.co/400x400/D5C4B3/8C867B?text=Detalhe'"
+                                    alt="Cortina Detalhe 1">
                             </div>
                             <div class="rounded-3xl overflow-hidden bg-gray-100 flex-1">
-                                <img class="w-full h-full object-cover clickable-img" src="./cortina3.png" onerror="this.src='https://placehold.co/400x400/C28F70/FFFFFF?text=Detalhe'" alt="Cortina Detalhe 2">
+                                <img class="w-full h-full object-cover clickable-img" src="./cortina3.png"
+                                    onerror="this.src='https://placehold.co/400x400/C28F70/FFFFFF?text=Detalhe'"
+                                    alt="Cortina Detalhe 2">
                             </div>
                         </div>
                     </div>
@@ -297,185 +384,33 @@
                 <div class="order-1 lg:order-2 reveal">
                     <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Persianas & Controle de Luz</h4>
                     <p class="text-lg text-nature-text mb-6 font-light leading-relaxed">
-                        A luz natural muda completamente a energia de um ambiente. Oferecemos persianas que controlam a luminosidade e temperatura, criando atmosferas relaxantes e privativas.
+                        A luz natural muda completamente a energia de um ambiente. Oferecemos persianas que controlam a
+                        luminosidade e temperatura, criando atmosferas relaxantes e privativas.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Motorizadas</span>
-                        <span class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Rolô</span>
-                        <span class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Romanas</span>
-                        <span class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Double Vision</span>
-                        <span class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Madeira</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Motorizadas</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Rolô</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Romanas</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Double
+                            Vision</span>
+                        <span
+                            class="bg-[#FCFCFA] border border-nature-sand/60 px-4 py-2 rounded-full text-sm font-medium text-nature-dark">Madeira</span>
                     </div>
-                    <a href="https://wa.me/5569993329564" target="_blank" class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
-                        Solicitar cotação de persianas <i data-lucide="arrow-right" class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
+                    <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20persianas."
+                        target="_blank"
+                        class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
+                        Solicitar cotação de persianas <i data-lucide="arrow-right"
+                            class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
                     </a>
                 </div>
             </div>
 
         </div>
     </section>
-    <!-- NOVA SESSÃO: PORTFÓLIO -->
-    <section id="portfolio" class="py-24 bg-[#FCFCFA] border-t border-nature-sand/20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
-                <div class="max-w-2xl">
-                    <h2 class="text-sm font-semibold tracking-widest uppercase text-nature-clay mb-3">Nosso Portfólio</h2>
-                    <h3 class="text-4xl md:text-5xl font-bold font-serif text-nature-dark mb-4">Inspirações <span class="font-serif italic text-nature-primary">Realizadas</span></h3>
-                    <p class="text-nature-text text-lg font-light">Um olhar sobre interiores aconchegantes, estofados sob medida e espaços planejados para a sua rotina.</p>
-                </div>
-                <a href="https://instagram.com/jginterioresjipa" target="_blank" rel="noopener noreferrer" class="mt-6 md:mt-0 flex items-center gap-2 text-sm font-medium uppercase tracking-wider text-nature-dark hover:text-nature-primary transition-colors pb-2 border-b border-nature-sand/50 hover:border-nature-primary">
-                    Ver no Instagram <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-
-            <!-- CARROSSEL DO PORTFÓLIO (4 SLIDES X 12 IMAGENS) -->
-            <div class="relative w-full overflow-hidden group/slider rounded-3xl">
-                
-                <!-- Botões de Navegação -->
-                <button id="portfolio-prev" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-nature-primary text-nature-dark hover:text-white p-3 rounded-r-2xl shadow-lg opacity-0 group-hover/slider:opacity-100 transition-all duration-300 transform -translate-x-full group-hover/slider:translate-x-0 focus:outline-none" aria-label="Página Anterior">
-                    <i data-lucide="chevron-left" class="w-8 h-8"></i>
-                </button>
-                <button id="portfolio-next" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-nature-primary text-nature-dark hover:text-white p-3 rounded-l-2xl shadow-lg opacity-0 group-hover/slider:opacity-100 transition-all duration-300 transform translate-x-full group-hover/slider:translate-x-0 focus:outline-none" aria-label="Próxima Página">
-                    <i data-lucide="chevron-right" class="w-8 h-8"></i>
-                </button>
-
-                <!-- Trilho do Carrossel -->
-                <div id="portfolio-track" class="flex transition-transform duration-700 ease-in-out w-full">
-                    
-                    <!-- SLIDE 1: SALAS (12 Imagens) -->
-                    <div class="w-full shrink-0">
-                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
-                            <span class="text-nature-dark font-serif font-bold text-xl">Salas & Livings</span>
-                        </div>
-                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                            <!-- Gerando 12 fotos com proporções alternadas para dar o efeito Masonry -->
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sala+1" alt="Sala 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Sala+2" alt="Sala 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Sala+3" alt="Sala 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/800x800/D5C4B3/4A4C46?text=Sala+4" alt="Sala 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/600x600/E8E5DF/4A4C46?text=Sala+5" alt="Sala 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/800x1000/F5F5F0/4A4C46?text=Sala+6" alt="Sala 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sala+7" alt="Sala 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Sala+8" alt="Sala 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Sala+9" alt="Sala 9" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/800x800/D5C4B3/4A4C46?text=Sala+10" alt="Sala 10" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/600x600/E8E5DF/4A4C46?text=Sala+11" alt="Sala 11" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm">
-                                <img src="https://placehold.co/800x1000/F5F5F0/4A4C46?text=Sala+12" alt="Sala 12" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy">
-                                <div class="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"><span class="text-white text-xs tracking-widest uppercase font-medium">Ver Detalhes</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 2: SOFÁS (12 Imagens) -->
-                    <div class="w-full shrink-0">
-                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
-                            <span class="text-nature-dark font-serif font-bold text-xl">Sofás & Poltronas</span>
-                        </div>
-                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/C28F70/FFFFFF?text=Sofa+1" alt="Sofa 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/C28F70/FFFFFF?text=Sofa+2" alt="Sofa 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sofa+3" alt="Sofa 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/C28F70/FFFFFF?text=Sofa+4" alt="Sofa 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/D5C4B3/4A4C46?text=Sofa+5" alt="Sofa 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/C28F70/FFFFFF?text=Sofa+6" alt="Sofa 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/D5C4B3/4A4C46?text=Sofa+7" alt="Sofa 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/C28F70/FFFFFF?text=Sofa+8" alt="Sofa 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/D5C4B3/4A4C46?text=Sofa+9" alt="Sofa 9" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/C28F70/FFFFFF?text=Sofa+10" alt="Sofa 10" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/D5C4B3/4A4C46?text=Sofa+11" alt="Sofa 11" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/C28F70/FFFFFF?text=Sofa+12" alt="Sofa 12" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 3: CORTINAS (12 Imagens) -->
-                    <div class="w-full shrink-0">
-                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
-                            <span class="text-nature-dark font-serif font-bold text-xl">Cortinas & Persianas</span>
-                        </div>
-                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/E8E5DF/4A4C46?text=Cortina+1" alt="Cortina 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/F5F5F0/4A4C46?text=Cortina+2" alt="Cortina 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Cortina+3" alt="Cortina 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Cortina+4" alt="Cortina 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/E8E5DF/4A4C46?text=Cortina+5" alt="Cortina 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/F5F5F0/4A4C46?text=Cortina+6" alt="Cortina 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/E8E5DF/4A4C46?text=Cortina+7" alt="Cortina 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/F5F5F0/4A4C46?text=Cortina+8" alt="Cortina 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/E8E5DF/4A4C46?text=Cortina+9" alt="Cortina 9" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/F5F5F0/4A4C46?text=Cortina+10" alt="Cortina 10" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/E8E5DF/4A4C46?text=Cortina+11" alt="Cortina 11" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/F5F5F0/4A4C46?text=Cortina+12" alt="Cortina 12" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 4: QUARTOS E BANHEIROS (12 Imagens) -->
-                    <div class="w-full shrink-0">
-                        <div class="bg-nature-light px-6 py-3 rounded-t-3xl mb-4 border border-nature-sand/20 border-b-0 inline-block">
-                            <span class="text-nature-dark font-serif font-bold text-xl">Quartos & Banheiros</span>
-                        </div>
-                        <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/5E7052/FFFFFF?text=Quarto+1" alt="Quarto 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/5E7052/FFFFFF?text=Quarto+2" alt="Quarto 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/5E7052/FFFFFF?text=Quarto+3" alt="Quarto 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/5E7052/FFFFFF?text=Quarto+4" alt="Quarto 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/5E7052/FFFFFF?text=Banheiro+1" alt="Banheiro 1" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/5E7052/FFFFFF?text=Banheiro+2" alt="Banheiro 2" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x800/5E7052/FFFFFF?text=Quarto+5" alt="Quarto 5" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x600/5E7052/FFFFFF?text=Quarto+6" alt="Quarto 6" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x900/5E7052/FFFFFF?text=Quarto+7" alt="Quarto 7" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x800/5E7052/FFFFFF?text=Quarto+8" alt="Quarto 8" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/600x600/5E7052/FFFFFF?text=Banheiro+3" alt="Banheiro 3" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                            <div class="gallery-item break-inside-avoid relative group overflow-hidden rounded-2xl shadow-sm"><img src="https://placehold.co/800x1000/5E7052/FFFFFF?text=Banheiro+4" alt="Banheiro 4" class="w-full h-auto object-cover transform-gpu will-change-transform group-hover:scale-105 transition-transform duration-700 ease-in-out clickable-img" loading="lazy"></div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Indicadores do Carrossel (Bolinhas) -->
-                <div class="flex justify-center gap-3 mt-12" id="portfolio-dots">
-                    <button class="portfolio-dot w-8 h-3 rounded-full bg-nature-primary transition-all duration-300" aria-label="Slide 1"></button>
-                    <button class="portfolio-dot w-3 h-3 rounded-full bg-nature-sand hover:bg-nature-primary transition-all duration-300" aria-label="Slide 2"></button>
-                    <button class="portfolio-dot w-3 h-3 rounded-full bg-nature-sand hover:bg-nature-primary transition-all duration-300" aria-label="Slide 3"></button>
-                    <button class="portfolio-dot w-3 h-3 rounded-full bg-nature-sand hover:bg-nature-primary transition-all duration-300" aria-label="Slide 4"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
 
@@ -484,39 +419,50 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">Passo a Passo</h2>
-                <h3 class="text-4xl md:text-5xl font-serif font-bold text-nature-dark">Como transformamos seu espaço</h3>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-nature-dark">Como transformamos seu espaço
+                </h3>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
                 <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20">
                     <div class="text-nature-primary font-serif text-5xl font-light mb-4">01.</div>
                     <h4 class="text-lg font-bold text-nature-dark mb-2">Projeto e Orçamento</h4>
-                    <p class="text-nature-text font-light text-sm leading-relaxed">Avaliamos seu desejo, tiramos medidas iniciais e entregamos um projeto 3D claro junto com o orçamento.</p>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Avaliamos seu desejo, tiramos medidas
+                        iniciais e entregamos um projeto 3D claro junto com o orçamento.</p>
                 </div>
-                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20" style="transition-delay: 100ms;">
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 100ms;">
                     <div class="text-nature-primary font-serif text-5xl font-light mb-4">02.</div>
                     <h4 class="text-lg font-bold text-nature-dark mb-2">Visita Técnica</h4>
-                    <p class="text-nature-text font-light text-sm leading-relaxed">Voltamos ao local para conferência milimétrica. Um espaço bem medido é a garantia de um encaixe natural.</p>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Voltamos ao local para conferência
+                        milimétrica. Um espaço bem medido é a garantia de um encaixe natural.</p>
                 </div>
-                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20" style="transition-delay: 200ms;">
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 200ms;">
                     <div class="text-nature-primary font-serif text-5xl font-light mb-4">03.</div>
                     <h4 class="text-lg font-bold text-nature-dark mb-2">Escolha de Materiais</h4>
-                    <p class="text-nature-text font-light text-sm leading-relaxed">Alinhamos todos os detalhes construtivos: puxadores, texturas de madeira e tecidos que conversam entre si.</p>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Alinhamos todos os detalhes
+                        construtivos: puxadores, texturas de madeira e tecidos que conversam entre si.</p>
                 </div>
                 <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20">
                     <div class="text-nature-primary font-serif text-5xl font-light mb-4">04.</div>
                     <h4 class="text-lg font-bold text-nature-dark mb-2">Fabricação com Cuidado</h4>
-                    <p class="text-nature-text font-light text-sm leading-relaxed">Produção atenta em nossa fábrica. Prazos reais (em média 20 dias úteis) para entregar qualidade duradoura.</p>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Produção atenta em nossa fábrica.
+                        Prazos reais (em média 20 dias úteis) para entregar qualidade duradoura.</p>
                 </div>
-                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20" style="transition-delay: 100ms;">
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 100ms;">
                     <div class="text-nature-primary font-serif text-5xl font-light mb-4">05.</div>
                     <h4 class="text-lg font-bold text-nature-dark mb-2">Montagem Especializada</h4>
-                    <p class="text-nature-text font-light text-sm leading-relaxed">Equipe limpa, educada e cuidadosa. Instalamos tudo garantindo o nivelamento e o respeito à sua casa.</p>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Equipe limpa, educada e cuidadosa.
+                        Instalamos tudo garantindo o nivelamento e o respeito à sua casa.</p>
                 </div>
-                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20" style="transition-delay: 200ms;">
+                <div class="reveal bg-white p-8 rounded-3xl shadow-sm border border-nature-sand/20"
+                    style="transition-delay: 200ms;">
                     <div class="text-nature-primary font-serif text-5xl font-light mb-4">06.</div>
                     <h4 class="text-lg font-bold text-nature-dark mb-2">Revisão Final</h4>
-                    <p class="text-nature-text font-light text-sm leading-relaxed">Conferência final de portas, corrediças e acabamentos. O projeto só acaba quando o sorriso do cliente aparece.</p>
+                    <p class="text-nature-text font-light text-sm leading-relaxed">Conferência final de portas,
+                        corrediças e acabamentos. O projeto só acaba quando o sorriso do cliente aparece.</p>
                 </div>
             </div>
         </div>
@@ -536,16 +482,23 @@
                         <!-- Grid de fotos -->
                         <div class="relative z-10 grid grid-cols-2 gap-4">
                             <!-- FOTO VERTICAL -->
-                            <div class="col-span-1 row-span-2 rounded-[2rem] overflow-hidden shadow-2xl h-[520px] bg-gray-100">
-                                <img src="./trabalho-1v.png" onerror="this.src='https://placehold.co/400x800/E8E5DF/8C867B?text=Trabalho'" alt="Equipe JG Interiores" class="w-full h-full object-cover">
+                            <div
+                                class="col-span-1 row-span-2 rounded-[2rem] overflow-hidden shadow-2xl h-[520px] bg-gray-100">
+                                <img src="./trabalho-1v.png"
+                                    onerror="this.src='https://placehold.co/400x800/E8E5DF/8C867B?text=Trabalho'"
+                                    alt="Equipe JG Interiores" class="w-full h-full object-cover">
                             </div>
                             <!-- FOTO HORIZONTAL SUPERIOR -->
                             <div class="rounded-[2rem] overflow-hidden shadow-xl h-[250px] bg-gray-100">
-                                <img src="./trabalho-2h.png" onerror="this.src='https://placehold.co/400x300/D5C4B3/8C867B?text=Trabalho'" alt="Família JG Interiores" class="w-full h-full object-cover">
+                                <img src="./trabalho-2h.png"
+                                    onerror="this.src='https://placehold.co/400x300/D5C4B3/8C867B?text=Trabalho'"
+                                    alt="Família JG Interiores" class="w-full h-full object-cover">
                             </div>
                             <!-- FOTO HORIZONTAL INFERIOR -->
                             <div class="rounded-[2rem] overflow-hidden shadow-xl h-[250px] bg-gray-100">
-                                <img src="./trabalho-3h.png" onerror="this.src='https://placehold.co/400x300/C28F70/FFFFFF?text=Trabalho'" alt="Produção JG Interiores" class="w-full h-full object-cover">
+                                <img src="./trabalho-3h.png"
+                                    onerror="this.src='https://placehold.co/400x300/C28F70/FFFFFF?text=Trabalho'"
+                                    alt="Produção JG Interiores" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -561,14 +514,18 @@
                     </h3>
                     <div class="space-y-6 text-nature-text font-light text-lg leading-relaxed">
                         <p>
-                            A JG Interiores nasceu em 1985, dentro de casa. Começamos com reformas de estofados, impulsionados pela simples vontade de fazer bem feito. O tempo passou, evoluímos e a marcenaria sob medida floresceu no nosso negócio.
+                            A JG Interiores nasceu em 1985, dentro de casa. Começamos com reformas de estofados,
+                            impulsionados pela simples vontade de fazer bem feito. O tempo passou, evoluímos e a
+                            marcenaria sob medida floresceu no nosso negócio.
                         </p>
                         <p>
-                            Nossa essência familiar dita como trabalhamos: gostamos de estar perto, conversar, entender a dinâmica da sua casa e construir parcerias sinceras com você e seu arquiteto.
+                            Nossa essência familiar dita como trabalhamos: gostamos de estar perto, conversar, entender
+                            a dinâmica da sua casa e construir parcerias sinceras com você e seu arquiteto.
                         </p>
                         <div class="bg-nature-light p-6 rounded-2xl border-l-4 border-nature-primary">
                             <p class="text-nature-dark font-medium italic">
-                                "Mais do que executar um projeto, queremos entregar ambientes que façam sentido, que tragam paz e funcionem na prática do seu dia a dia."
+                                "Mais do que executar um projeto, queremos entregar ambientes que façam sentido, que
+                                tragam paz e funcionem na prática do seu dia a dia."
                             </p>
                         </div>
                     </div>
@@ -579,7 +536,9 @@
     </section>
 
     <footer id="contato" class="bg-nature-dark pt-24 pb-12 text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==')]"></div>
+        <div
+            class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI2ZmZmZmZiIvPjwvc3ZnPg==')]">
+        </div>
 
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal relative z-10">
             <div class="bg-white/5 rounded-[3rem] p-10 md:p-16 border border-white/10 mb-20 backdrop-blur-sm">
@@ -587,32 +546,42 @@
                     Vamos dar vida ao seu <br class="hidden md:block">próximo ambiente?
                 </h2>
                 <p class="text-nature-light/80 text-lg mb-10 max-w-2xl mx-auto font-light">
-                    Traga sua ideia ou projeto. Cuidaremos de cada detalhe para que seu espaço reflita sua verdadeira natureza. Entre em contato e agende uma conversa sem compromisso.
+                    Traga sua ideia ou projeto. Cuidaremos de cada detalhe para que seu espaço reflita sua verdadeira
+                    natureza. Entre em contato e agende uma conversa sem compromisso.
                 </p>
-                <a href="https://wa.me/5569993329564" target="_blank" class="inline-flex items-center bg-nature-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#4C5B42] hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-nature-dark/50">
+                <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
+                    target="_blank"
+                    class="inline-flex items-center bg-nature-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#4C5B42] hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-nature-dark/50">
                     <i data-lucide="message-circle" class="mr-3 w-6 h-6"></i> Chamar Especialista no WhatsApp
                 </a>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left border-b border-white/10 pb-12 mb-8">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left border-b border-white/10 pb-12 mb-8">
                 <div class="flex flex-col items-center md:items-start">
-                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
                         <i data-lucide="map-pin" class="w-6 h-6"></i>
                     </div>
                     <h5 class="text-lg font-bold mb-2">Localização</h5>
-                    <p class="text-nature-light/70 font-light text-sm">Rua Governador Jorge Teixeira Nº 1113 <br> RO / Ji-Paraná 76908-468<br>Atendimento dedicado na região.</p>
+                    <p class="text-nature-light/70 font-light text-sm">Rua Governador Jorge Teixeira Nº 1113 <br> RO /
+                        Ji-Paraná 76908-468<br>Atendimento dedicado na região.</p>
                 </div>
                 <div class="flex flex-col items-center md:items-start">
-                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
                         <i data-lucide="phone" class="w-6 h-6"></i>
                     </div>
                     <h5 class="text-lg font-bold mb-2">Contatos</h5>
                     <p class="text-nature-light/70 font-light text-sm">(69) 99332-9564<br>(69) 99382-9370</p>
                 </div>
                 <div class="flex flex-col items-center md:items-start">
-                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
+                    <div
+                        class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-4 text-nature-sand">
                         <a href="https://instagram.com/jginterioresjipa" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-6 h-6">
                                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                                 <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z" />
                                 <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
@@ -620,7 +589,8 @@
                         </a>
                     </div>
                     <h5 class="text-lg font-bold mb-2">Redes Sociais</h5>
-                    <a href="https://instagram.com/jginterioresjipa" target="_blank" class="text-nature-light/70 font-light text-sm hover:text-white transition-colors">
+                    <a href="https://instagram.com/jginterioresjipa" target="_blank"
+                        class="text-nature-light/70 font-light text-sm hover:text-white transition-colors">
                         @jginterioresjipa<br>Acompanhe nosso trabalho.
                     </a>
                 </div>
@@ -633,24 +603,27 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5569993329564" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-30 bg-[#25D366] hover:bg-[#1ebd5b] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
+  <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-30 bg-[#25D366] hover:bg-[#1ebd5b] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
         <span class="max-w-0 overflow-hidden group-hover:max-w-[150px] transition-all duration-500 ease-in-out whitespace-nowrap pl-0 group-hover:pl-3 font-medium">Fale com a JG</span>
     </a>
 
     <!-- Modal do Lightbox (Tela escura para abrir fotos) -->
-    <div id="lightbox-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300 opacity-0 px-4">
-        
+    <div id="lightbox-modal"
+        class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300 opacity-0 px-4">
+
         <!-- Fundo clicável para fechar -->
         <div id="lightbox-backdrop" class="absolute inset-0 w-full h-full cursor-pointer"></div>
-        
+
         <!-- Botão Fechar -->
-        <button id="lightbox-close" class="absolute top-4 right-4 md:top-8 md:right-8 z-10 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 p-3 rounded-full transition-all focus:outline-none flex items-center justify-center">
+        <button id="lightbox-close"
+            class="absolute top-4 right-4 md:top-8 md:right-8 z-10 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 p-3 rounded-full transition-all focus:outline-none flex items-center justify-center">
             <i data-lucide="x" class="w-6 h-6 md:w-8 md:h-8"></i>
         </button>
 
         <!-- Imagem Principal -->
-        <img id="lightbox-img" src="" alt="Imagem Ampliada" class="relative z-10 max-w-full max-h-[85vh] md:max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300 select-none">
+        <img id="lightbox-img" src="" alt="Imagem Ampliada"
+            class="relative z-10 max-w-full max-h-[85vh] md:max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300 select-none">
     </div>
 
     <script>
@@ -710,7 +683,7 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); 
+        reveal();
 
         // --- TRACKER ---
         const isPreview = new URLSearchParams(window.location.search).get('preview') === 'true';
@@ -746,7 +719,7 @@
             });
         }
 
-        if(nextBtn && prevBtn) {
+        if (nextBtn && prevBtn) {
             nextBtn.addEventListener('click', () => {
                 currentSlide = (currentSlide + 1) % totalSlides;
                 updateCarousel();
@@ -778,7 +751,7 @@
             lightboxImg.src = imageSrc;
             lightboxModal.classList.remove('hidden');
             lightboxModal.classList.add('flex');
-            
+
             setTimeout(() => {
                 lightboxModal.classList.remove('opacity-0');
                 lightboxImg.classList.remove('scale-95');
@@ -792,11 +765,11 @@
             lightboxModal.classList.add('opacity-0');
             lightboxImg.classList.remove('scale-100');
             lightboxImg.classList.add('scale-95');
-            
+
             setTimeout(() => {
                 lightboxModal.classList.add('hidden');
                 lightboxModal.classList.remove('flex');
-                lightboxImg.src = ""; 
+                lightboxImg.src = "";
                 document.body.classList.remove('overflow-hidden');
             }, 300);
         }
@@ -808,7 +781,7 @@
         });
 
         lightboxCloseBtn.addEventListener('click', closeLightbox);
-        lightboxBackdrop.addEventListener('click', closeLightbox); 
+        lightboxBackdrop.addEventListener('click', closeLightbox);
 
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
@@ -818,4 +791,5 @@
 
     </script>
 </body>
+
 </html>
