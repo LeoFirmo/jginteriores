@@ -104,7 +104,6 @@
         class="fixed w-full z-40 transition-all duration-500 bg-[#FCFCFA]/90 backdrop-blur-md border-b border-nature-sand/30 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             <a href="#hero" class="flex items-center group">
-                <!-- Fallback na imagem caso não carregue logo.png -->
                 <img src="logo.png" onerror="this.src='https://placehold.co/100x48/F5F5F0/2A3324?text=JG'"
                     class="h-12 w-auto object-contain mr-3" alt="JG Interiores">
                 <div>
@@ -121,6 +120,7 @@
                 <a href="#sobre" class="hover:text-nature-primary transition-colors">História</a>
                 <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento%20para%20meu%20projeto."
                     target="_blank"
+                    onclick="return reportConversion(this.href);"
                     class="bg-nature-primary text-white px-6 py-2.5 rounded-full text-sm hover:bg-nature-dark transition-colors duration-300 shadow-sm">
                     Fazer Orçamento
                 </a>
@@ -147,6 +147,7 @@
                 História</a>
             <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                 target="_blank"
+                onclick="return reportConversion(this.href);"
                 class="bg-nature-primary text-white text-center py-4 rounded-full font-medium mt-4 flex justify-center items-center">
                 <i data-lucide="message-circle" class="mr-2 w-5 h-5"></i> Falar no WhatsApp
             </a>
@@ -178,6 +179,7 @@
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                         target="_blank"
+                        onclick="return reportConversion(this.href);"
                         class="bg-nature-primary text-white px-8 py-4 rounded-full font-medium hover:bg-nature-dark transition-colors flex items-center justify-center text-center shadow-lg shadow-nature-primary/20">
                         Falar com Especialista <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
                     </a>
@@ -262,7 +264,6 @@
                 <div class="w-16 h-1 bg-nature-sand mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <!-- Móveis Planejados -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
                 <div class="order-2 lg:order-1 reveal">
                     <div class="grid grid-cols-2 gap-4">
@@ -314,6 +315,7 @@
                     </ul>
                     <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vi%20a%20se%C3%A7%C3%A3o%20de%20m%C3%B3veis%20planejados%20no%20site%20e%20quero%20projetar%20os%20meus."
                         target="_blank"
+                        onclick="return reportConversion(this.href);"
                         class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
                         Projetar meus móveis <i data-lucide="arrow-right"
                             class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
@@ -321,7 +323,6 @@
                 </div>
             </div>
 
-            <!-- Estofados -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
                 <div class="reveal">
                     <h4 class="text-3xl font-serif font-bold text-nature-dark mb-6">Estofados & Conforto</h4>
@@ -345,6 +346,7 @@
                     </ul>
                     <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vi%20os%20estofados%20no%20site%20e%20gostaria%20de%20ver%20o%20cat%C3%A1logo."
                         target="_blank"
+                        onclick="return reportConversion(this.href);"
                         class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
                         Ver catálogo de estofados <i data-lucide="arrow-right"
                             class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
@@ -358,7 +360,6 @@
                 </div>
             </div>
 
-            <!-- Persianas -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="order-2 lg:order-1 reveal">
                     <div class="grid grid-cols-1 md:grid-cols-12 gap-4 min-h-[450px]">
@@ -402,6 +403,7 @@
                     </div>
                     <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20persianas."
                         target="_blank"
+                        onclick="return reportConversion(this.href);"
                         class="inline-flex items-center text-nature-primary font-bold hover:text-nature-dark transition-colors group">
                         Solicitar cotação de persianas <i data-lucide="arrow-right"
                             class="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform"></i>
@@ -411,9 +413,6 @@
 
         </div>
     </section>
-
-
-
 
     <section id="processo" class="py-24 bg-nature-light relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -468,33 +467,26 @@
         </div>
     </section>
 
-
     <section id="sobre" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
 
-                <!-- GALERIA DE FOTOS -->
                 <div class="w-full lg:w-1/2 reveal">
                     <div class="relative p-6">
-                        <!-- Fundo decorativo -->
                         <div class="absolute inset-0 bg-nature-light rounded-full transform -rotate-6"></div>
 
-                        <!-- Grid de fotos -->
                         <div class="relative z-10 grid grid-cols-2 gap-4">
-                            <!-- FOTO VERTICAL -->
                             <div
                                 class="col-span-1 row-span-2 rounded-[2rem] overflow-hidden shadow-2xl h-[520px] bg-gray-100">
                                 <img src="./trabalho-1v.png"
                                     onerror="this.src='https://placehold.co/400x800/E8E5DF/8C867B?text=Trabalho'"
                                     alt="Equipe JG Interiores" class="w-full h-full object-cover">
                             </div>
-                            <!-- FOTO HORIZONTAL SUPERIOR -->
                             <div class="rounded-[2rem] overflow-hidden shadow-xl h-[250px] bg-gray-100">
                                 <img src="./trabalho-2h.png"
                                     onerror="this.src='https://placehold.co/400x300/D5C4B3/8C867B?text=Trabalho'"
                                     alt="Família JG Interiores" class="w-full h-full object-cover">
                             </div>
-                            <!-- FOTO HORIZONTAL INFERIOR -->
                             <div class="rounded-[2rem] overflow-hidden shadow-xl h-[250px] bg-gray-100">
                                 <img src="./trabalho-3h.png"
                                     onerror="this.src='https://placehold.co/400x300/C28F70/FFFFFF?text=Trabalho'"
@@ -504,7 +496,6 @@
                     </div>
                 </div>
 
-                <!-- TEXTO -->
                 <div class="w-full lg:w-1/2 reveal">
                     <h2 class="text-nature-clay font-semibold tracking-widest uppercase mb-3 text-sm">
                         Nossas Raízes
@@ -551,6 +542,7 @@
                 </p>
                 <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista."
                     target="_blank"
+                    onclick="return reportConversion(this.href);"
                     class="inline-flex items-center bg-nature-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-[#4C5B42] hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-nature-dark/50">
                     <i data-lucide="message-circle" class="mr-3 w-6 h-6"></i> Chamar Especialista no WhatsApp
                 </a>
@@ -603,31 +595,30 @@
         </div>
     </footer>
 
-  <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-30 bg-[#25D366] hover:bg-[#1ebd5b] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
+  <a href="https://wa.me/5569993329564?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20falar%20com%20um%20especialista." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    onclick="return reportConversion(this.href);"
+    class="fixed bottom-6 right-6 z-30 bg-[#25D366] hover:bg-[#1ebd5b] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
         <span class="max-w-0 overflow-hidden group-hover:max-w-[150px] transition-all duration-500 ease-in-out whitespace-nowrap pl-0 group-hover:pl-3 font-medium">Fale com a JG</span>
     </a>
 
-    <!-- Modal do Lightbox (Tela escura para abrir fotos) -->
     <div id="lightbox-modal"
         class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity duration-300 opacity-0 px-4">
 
-        <!-- Fundo clicável para fechar -->
         <div id="lightbox-backdrop" class="absolute inset-0 w-full h-full cursor-pointer"></div>
 
-        <!-- Botão Fechar -->
         <button id="lightbox-close"
             class="absolute top-4 right-4 md:top-8 md:right-8 z-10 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 p-3 rounded-full transition-all focus:outline-none flex items-center justify-center">
             <i data-lucide="x" class="w-6 h-6 md:w-8 md:h-8"></i>
         </button>
 
-        <!-- Imagem Principal -->
         <img id="lightbox-img" src="" alt="Imagem Ampliada"
             class="relative z-10 max-w-full max-h-[85vh] md:max-h-[90vh] object-contain rounded-lg shadow-2xl transform scale-95 transition-transform duration-300 select-none">
     </div>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18161803059"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18161803059"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -635,7 +626,6 @@
 
   gtag('config', 'AW-18161803059');
 </script>
-
 
     <script>
         // Inicializar ícones
