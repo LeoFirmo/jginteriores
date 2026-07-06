@@ -642,6 +642,23 @@
         lucide.createIcons();
         document.getElementById('year').textContent = new Date().getFullYear();
 
+        // --- FUNÇÃO DE CONVERSÃO DO GOOGLE ADS ---
+        function reportConversion(url) {
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18161803059/UqenCLD888scELO-nNRD',
+                    'value': 1.0,
+                    'currency': 'BRL',
+                    'event_callback': function() {
+                        if (url) window.open(url, '_blank');
+                    }
+                });
+            } else {
+                if (url) window.open(url, '_blank');
+            }
+            return false;
+        }
+
         // Controle Navbar no Scroll
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
